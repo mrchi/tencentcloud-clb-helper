@@ -150,7 +150,7 @@ class TencentCloudCLBHelper:
         return list(target_instances), listener.ListenerId, listener.Rules[0].LocationId
 
     def list_clb_targets(self, clb_id: str):
-        """展示 CLB 后端列表"""
+        """按节点展示 CLB 后端列表"""
         target_instances, _, _ = self._req_describe_targets(clb_id=clb_id)
 
         # 处理一下数据
@@ -255,7 +255,7 @@ class TencentCloudCLBHelper:
         self._console.print("延时 3 秒等待生效...")
 
     def online_clb_instance(self, clb_id: str, instance_id: str):
-        """上线 CLB 后端节点"""
+        """按节点批量上线 CLB 后端端口"""
         self.list_clb_targets(clb_id=clb_id)
         self._change_clb_instance_weight(
             clb_id=clb_id, instance_id=instance_id, weight=10
@@ -264,7 +264,7 @@ class TencentCloudCLBHelper:
         self.list_clb_targets(clb_id=clb_id)
 
     def offline_clb_instance(self, clb_id: str, instance_id: str):
-        """下线 CLB 后端节点"""
+        """按节点批量下线 CLB 后端端口"""
         self.list_clb_targets(clb_id=clb_id)
         self._change_clb_instance_weight(
             clb_id=clb_id, instance_id=instance_id, weight=0
