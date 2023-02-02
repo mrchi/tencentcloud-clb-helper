@@ -4,6 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+tencentcloud-sdk-python = "*"
+rich = "*"
+fire = "*"
 
 [dev-packages]
 black = "*"
@@ -14,4 +17,4 @@ pytest = "*"
 pytest-env = "*"
 
 [requires]
-python_version = "3.10"
+python_version = "3.11"
