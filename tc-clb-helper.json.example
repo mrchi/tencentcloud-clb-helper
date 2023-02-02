@@ -1,6 +1,6 @@
 {
     "secret_id": "",
     "secret_key": "",
-    "region": "",
-    "endpoint": ""
+    "region": "ap-shanghai",
+    "endpoint": "clb.tencentcloudapi.com"
 }
