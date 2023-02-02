@@ -515,3 +515,5 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,linux,windows,python,go,visualstudiocode,vim,pycharm,flask,django
+
+tc-clb-helper.json
